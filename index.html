@@ -46,13 +46,7 @@
             transition: transform 0.3s;
             margin-bottom: 20px;
         }
-        
-        .feature-card img {
-            width: 100%;       /* 寬度撐滿容器 */
-            height: 200px;     /* 強制固定高度 */
-            object-fit: cover; /* 關鍵！圖片會自動裁切填滿，不會變形 */
-            border-radius: 8px; /* 圓角（選用） */
-        }
+    
         .feature-card:hover { transform: translateY(-10px); }
         
         /* 手機版優化 */
@@ -101,7 +95,9 @@
             </div>
 
             <div class="col-md-6 text-center">
-                <img src="OLED_tech.png" class="img-fluid" alt="技術展示">
+                <!-- 將圖片寬度限制在 300px 以內，並水平置中 (d-block mx-auto) -->
+                <img src="OLED_tech.png" class="img-fluid d-block mx-auto" style="max-width: 300px;" alt="技術展示">
+                
             </div>
         </div>
     </section>
@@ -158,6 +154,7 @@
     <script src="https://cdn.jsdelivr.net"></script>
 </body>
 </html>
+
 
 
 
