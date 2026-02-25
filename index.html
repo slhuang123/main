@@ -46,6 +46,13 @@
             transition: transform 0.3s;
             margin-bottom: 20px;
         }
+        
+        .feature-card img {
+            width: 100%;       /* 寬度撐滿容器 */
+            height: 200px;     /* 強制固定高度 */
+            object-fit: cover; /* 關鍵！圖片會自動裁切填滿，不會變形 */
+            border-radius: 8px; /* 圓角（選用） */
+        }
         .feature-card:hover { transform: translateY(-10px); }
         
         /* 手機版優化 */
@@ -151,5 +158,6 @@
     <script src="https://cdn.jsdelivr.net"></script>
 </body>
 </html>
+
 
 
