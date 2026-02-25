@@ -50,9 +50,21 @@
         .feature-card:hover { transform: translateY(-10px); }
         
         /* 手機版優化 */
+        /*
         @media (max-width: 768px) {
             .hero-section h1 { font-size: 2rem; }
             .section-padding { padding: 50px 0; }
+        } */
+
+        @media (max-width: 768px) {
+            .hero-section img, 
+            #about img { 
+                max-width: 250px;  /* 限制圖片最大寬度為 250 像素 */
+                height: auto;      /* 保持比例 */
+                display: block;    /* 轉為區塊元素 */
+                margin: 0 auto;    /* 自動水平居中 */
+                margin-bottom: 20px; /* 下方留一點白，才不會貼著文字 */
+            }
         }
         
         footer { background: var(--primary-dark); color: white; padding: 40px 0; }
@@ -95,8 +107,8 @@
             </div>
 
             <div class="col-md-6 text-center">
-                <!-- 將圖片寬度限制在 300px 以內，並水平置中 (d-block mx-auto) -->
-                <img src="OLED_tech.png" class="img-fluid d-block mx-auto" style="max-width: 300px;" alt="技術展示">
+                <!-- 將圖片水平置中 (d-block mx-auto) -->
+                <img src="OLED_tech.png" class="img-fluid d-block mx-auto" alt="技術展示">
                 
             </div>
         </div>
@@ -154,6 +166,7 @@
     <script src="https://cdn.jsdelivr.net"></script>
 </body>
 </html>
+
 
 
 
