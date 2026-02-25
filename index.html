@@ -49,21 +49,19 @@
     
         .feature-card:hover { transform: translateY(-10px); }
         
-        /* 手機版優化 */
-        /*
+        .mobile-fit-img {
+            display: block;
+            margin: 0 auto;    /* 置中 */
+            max-width: 500px;  /* 電腦版顯示的最大寬度，可隨意調整 */
+            height: auto;
+        }
+        
+        /* 媒體查詢：當螢幕寬度小於 768px（手機/平板）時執行 */
         @media (max-width: 768px) {
-            .hero-section h1 { font-size: 2rem; }
-            .section-padding { padding: 50px 0; }
-        } */
-
-        @media (max-width: 768px) {
-            .hero-section img, 
-            #about img { 
-                max-width: 250px;  /* 限制圖片最大寬度為 250 像素 */
-                height: auto;      /* 保持比例 */
-                display: block;    /* 轉為區塊元素 */
-                margin: 0 auto;    /* 自動水平居中 */
-                margin-bottom: 20px; /* 下方留一點白，才不會貼著文字 */
+            .mobile-fit-img {
+                width: 100% !important; /* 強制手機版撐滿 */
+                max-width: 100%;       /* 移除電腦版的寬度限制 */
+                padding: 0;            /* 確保左右不留白，完全貼合螢幕或文字邊緣 */
             }
         }
         
@@ -107,10 +105,7 @@
             </div>
 
             <div class="col-md-6 text-center">
-                <!-- 將圖片水平置中 (d-block mx-auto)
-                <img src="OLED_tech.png" class="img-fluid d-block mx-auto" alt="技術展示"> -->
-                <!-- w-100 讓圖片撐滿容器寬度，與文字邊緣對齊 -->
-                <img src="OLED_tech.png" class="img-fluid w-100" style="max-height: 400px; object-fit: cover;" alt="技術展示">
+                <img src="OLED_tech.png" class="img-fluid mobile-fit-img" alt="技術展示">
             </div>
         </div>
     </section>
@@ -167,6 +162,7 @@
     <script src="https://cdn.jsdelivr.net"></script>
 </body>
 </html>
+
 
 
 
