@@ -3,33 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>歡迎來到我的新網站</title>
+    <title>OLEDIATEK - 觸控顯示解決方案</title>
+    <!-- 引入 Google 字體與 Bootstrap CSS 確保手機版型 -->
+    <link href="https://cdn.jsdelivr.net" rel="stylesheet">
     <style>
+        :root {
+            --primary-dark: #1a1a1a;
+            --accent-blue: #007bff;
+        }
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Microsoft JhengHei", sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        /* 導覽列 */
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        /* 主視覺區 (Hero Section) */
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('touch_back.png');
+            background-size: cover;
+            background-position: center;
+            height: 40vh;
             display: flex;
-            justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f2f5;
-        }
-        .container {
+            justify-content: center;
+            color: white;
             text-align: center;
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        h1 { color: #1a73e8; }
-        p { color: #5f6368; }
+        .hero-section h1 { font-size: 3rem; font-weight: bold; }
+        
+        /* 內容區塊 */
+        .section-padding { padding: 80px 0; }
+        .bg-light-gray { background-color: #f8f9fa; }
+        
+        /* 產品特點卡片 */
+        .feature-card {
+            border: none;
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+        .feature-card:hover { transform: translateY(-10px); }
+        
+        /* 手機版優化 */
+        @media (max-width: 768px) {
+            .hero-section h1 { font-size: 2rem; }
+            .section-padding { padding: 50px 0; }
+        }
+        
+        footer { background: var(--primary-dark); color: white; padding: 40px 0; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>你好，世界！</h1>
-        <p>這是我的第一個由 GitHub Pages 託管的網站。</p>
-        <p>網域 <strong>olediatek.com</strong> 已成功連線！</p>
-    </div>
+
+    <!-- 導覽列 -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">OLEDIATEK</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">關於我們</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">產品技術</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">聯絡我們</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主視覺區 -->
+    <header class="hero-section">
+        <div class="container">
+            <h1>OLEDIATEK</h1>
+            <p class="lead">先進的 OLED 觸控顯示技術領導者</p>
+            <a href="#contact" class="btn btn-primary btn-lg mt-3">立即諮詢</a>
+        </div>
+    </header>
+
+    <!-- 關於我們 -->
+    <section id="about" class="section-padding container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2 class="mb-4">專業觸控顯示方案</h2>
+                <p>OLEDIATEK 致力於提供高品質的 OLED 顯示技術，並結合創新的觸控解決方案。我們專注於研發最前瞻的電子零件，為全球客戶提供穩定的供應與技術支援。</p>
+            </div>
+
+            <div class="col-md-6 text-center">
+                <img src="oled_tech.png" class="img-fluid rounded shadow" alt="技術展示">
+            </div>
+        </div>
+    </section>
+
+    <!-- 產品特點 -->
+    <section id="products" class="section-padding bg-light-gray">
+        <div class="container text-center">
+            <h2 class="mb-5">我們的優勢</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card h-100 p-4 feature-card">
+                        <h4>高對比 OLED</h4>
+                        <p>極致黑與鮮豔色彩，提供最完美的視覺饗宴。</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 p-4 feature-card">
+                        <h4>靈敏觸控</h4>
+                        <p>支援多點觸控，適用於工業、車用及消費性電子。</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 p-4 feature-card">
+                        <h4>客製化服務</h4>
+                        <p>針對不同尺寸與規格需求，提供專業定製方案。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯絡我們 -->
+    <section id="contact" class="section-padding container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <h2 class="mb-4">聯絡我們</h2>
+                <p>有任何技術問題或產品需求？歡迎直接與我們聯繫。</p>
+                <div class="mt-4">
+                    <p><strong>Email:</strong> info@olediatek.com</p>
+                    <p><strong>服務時間:</strong> 週一至週五 09:00 - 18:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer>
+        <div class="container text-center">
+            <p>© 2024 OLEDIATEK. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS 確保手機版選單可以收合 -->
+    <script src="https://cdn.jsdelivr.net"></script>
 </body>
 </html>
